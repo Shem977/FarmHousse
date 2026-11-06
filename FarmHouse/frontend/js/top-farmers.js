@@ -51,14 +51,14 @@ function createTopFarmerCard(farmer) {
     return card;
 }
 
-fetch("/frontend/data/JSON/farmers.json")
+fetch("/api/farmers")
     .then((response) => {
         if (!response.ok) throw new Error(`Farmer request failed with status ${response.status}.`);
         return response.json();
     })
-    .then((farmers) => {
-        if (!Array.isArray(farmers)) throw new Error("The farmer directory must be a JSON array.");
-        const featuredFarmers = farmers
+    .then((data) => {
+        if (!data || !Array.isArray(data.items)) throw new Error("The farmer API response must contain an items array.");
+        const featuredFarmers = data.items
             .filter((farmer) =>
                 typeof farmer.name === "string" &&
                 typeof farmer.region === "string" &&

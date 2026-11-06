@@ -86,14 +86,14 @@ regionButtons.forEach((button) => {
 
 farmerSearch.addEventListener("input", renderFarmers);
 
-fetch("/frontend/data/JSON/farmers.json")
+fetch("/api/farmers")
     .then((response) => {
         if (!response.ok) throw new Error(`Farmer request failed with status ${response.status}.`);
         return response.json();
     })
     .then((data) => {
-        if (!Array.isArray(data)) throw new Error("The farmer directory must be a JSON array.");
-        farmerList = data.filter((farmer) =>
+        if (!data || !Array.isArray(data.items)) throw new Error("The farmer API response must contain an items array.");
+        farmerList = data.items.filter((farmer) =>
             typeof farmer.name === "string" &&
             typeof farmer.region === "string" &&
             Array.isArray(farmer.crops) &&

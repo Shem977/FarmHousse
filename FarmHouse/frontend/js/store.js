@@ -68,6 +68,25 @@
         showToast("Item removed from your basket.");
     }
 
+    async function placeOrder(customer) {
+        if (!cart.length) throw new Error("Add at least one product to your basket.");
+        const response = await fetch("/api/orders", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                customer,
+                items: cart.map((item) => ({ productId: item.id, quantity: item.quantity }))
+            })
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "The demo order could not be created.");
+        cart = [];
+        saveCart();
+        updateCartCounts();
+        renderCart();
+        return result.order;
+    }
+
     function createElement(tag, className, text) {
         const element = document.createElement(tag);
         if (className) element.className = className;
@@ -147,7 +166,7 @@
         container.append(totalRow);
         const checkout = createElement("button", "button button-primary cart-checkout", "Continue to checkout");
         checkout.type = "button";
-        checkout.addEventListener("click", () => showToast("Checkout will be available when payment services are connected."));
+        checkout.dataset.checkoutStart = "true";
         container.append(checkout);
         updateCartCounts();
     }
@@ -163,11 +182,11 @@
     });
 
     async function loadProducts() {
-        const response = await fetch("/frontend/data/JSON/products.json");
+        const response = await fetch("/api/products");
         if (!response.ok) throw new Error(`Product request failed with status ${response.status}.`);
         const data = await response.json();
-        if (!Array.isArray(data)) throw new Error("The product catalogue must be a JSON array.");
-        products = data.filter((product) =>
+        if (!data || !Array.isArray(data.items)) throw new Error("The product API response must contain an items array.");
+        products = data.items.filter((product) =>
             Number.isInteger(Number(product.id)) &&
             typeof product.name === "string" &&
             typeof product.category === "string" &&
@@ -183,6 +202,7 @@
         addToCart,
         createProductCard,
         loadProducts,
+        placeOrder,
         products: () => [...products],
         renderCart
     };

@@ -42,6 +42,19 @@
             </aside>
         </div>
     </div></main>
+    <div class="modal-backdrop" id="checkoutDialog" hidden>
+        <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+            <button class="modal-close" type="button" id="closeCheckout" aria-label="Close checkout"><i class="fa-solid fa-xmark"></i></button>
+            <p class="eyebrow">SIMULATED CHECKOUT</p><h2 id="checkoutTitle">Place a demo order</h2>
+            <p>This creates a sample order in the local database. No payment is collected.</p>
+            <form id="checkoutForm">
+                <label class="field">Your name<input name="name" autocomplete="name" required maxlength="80" placeholder="Your name"></label>
+                <label class="field">Email address<input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></label>
+                <div class="form-message" id="checkoutMessage" role="status" aria-live="polite"></div>
+                <div class="modal-actions"><button class="button button-outline" type="button" id="cancelCheckout">Cancel</button><button class="button button-primary" type="submit">Place demo order</button></div>
+            </form>
+        </section>
+    </div>
     <footer class="site-footer"><div class="container footer-bottom"><span>© <span data-current-year>2026</span> FarmHouse. Growing together.</span><span>Buyer workspace · Frontend preview</span></div></footer>
     <div class="toast" data-toast role="status" aria-live="polite"></div>
     <script src="/frontend/js/site.js"></script>
