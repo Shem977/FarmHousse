@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in or create a preview account for the FarmHouse marketplace.">
+    <title>Sign in | FarmHouse</title>
+    <link rel="stylesheet" href="/frontend/css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"><div class="container nav-bar">
+        <a class="brand" href="/frontend/index.html" aria-label="FarmHouse home"><img src="/frontend/assets/img/logo.png" alt=""><span class="brand-text">Farm<span class="brand-accent">House</span><small>GROWING TOGETHER</small></span></a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <nav class="site-nav" aria-label="Main navigation"><a href="/frontend/index.html">Home</a><a href="/frontend/public/catalogue.html">Catalogue</a><a href="/frontend/public/farmers.html">Farmers</a><a href="/frontend/public/about.html">About</a><a href="/frontend/public/contact.html">Contact</a></nav>
+        <div class="nav-actions"><a class="button button-outline button-small" href="/frontend/index.html">Back to home</a></div>
+    </div></header>
+    <main class="auth-shell">
+        <section class="auth-visual"><div><p class="eyebrow">FarmHouse community</p><h1>Let’s grow something good.</h1><p>Sign in to explore your dashboard or create a preview account to see what’s coming.</p></div></section>
+        <section class="auth-side"><div class="auth-card">
+            <p class="eyebrow" id="authEyebrow">WELCOME BACK</p><h1 id="authTitle">Sign in to FarmHouse</h1><p id="authDescription">Choose your account type and enter your details.</p>
+            <div class="auth-note"><i class="fa-solid fa-circle-info"></i> This is a frontend preview. Sign-in and registration are not connected to authentication.</div>
+            <div class="role-picker" role="group" aria-label="Choose account type">
+                <button class="role-option active" type="button" data-role="buyer" aria-pressed="true"><i class="fa-solid fa-basket-shopping"></i>Buyer</button>
+                <button class="role-option" type="button" data-role="farmer" aria-pressed="false"><i class="fa-solid fa-tractor"></i>Farmer</button>
+                <button class="role-option" type="button" data-role="admin" aria-pressed="false"><i class="fa-solid fa-user-shield"></i>Admin</button>
+            </div>
+            <form id="accountForm">
+                <label class="field" id="nameField" hidden>Full name<input name="name" autocomplete="name" maxlength="80" placeholder="Your name"></label>
+                <label class="field">Email address<input name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@example.com"></label>
+                <label class="field">Password<div class="password-wrap"><input name="password" type="password" autocomplete="current-password" minlength="6" required placeholder="At least 6 characters"><button class="password-toggle" type="button" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div></label>
+                <div class="auth-options" id="authOptions"><label><input type="checkbox" name="remember"> Remember me</label><a href="#" id="forgotPassword">Forgot password?</a></div>
+                <button class="button button-primary" type="submit" id="submitAccount" style="width:100%">Sign in <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <p class="auth-switch"><span id="switchPrompt">New to FarmHouse?</span> <a href="#register" id="switchMode">Create an account</a></p>
+            <p class="auth-switch"><a href="/frontend/public/catalogue.html">Continue browsing the catalogue</a></p>
+            <div class="form-message" id="accountMessage" role="status" aria-live="polite"></div>
+        </div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-bottom"><span>© <span data-current-year>2026</span> FarmHouse. Growing together.</span><span>Frontend preview · No credentials are sent or stored.</span></div></footer>
+    <script src="/frontend/js/site.js"></script>
+    <script src="/frontend/js/account.js"></script>
+</body>
+</html>

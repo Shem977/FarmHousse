@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "John Kamau",
+    "region": "Central",
+    "items": "Maize seeds",
+    "crops": ["Maize", "Beans"],
+    "experience": "12 years farming",
+    "rating": 4.9,
+    "score": 865,
+    "about": "A maize and bean grower focused on reliable seed and healthy soil."
+  },
+  {
+    "id": 2,
+    "name": "James Kariuki",
+    "region": "Central",
+    "items": "Fertilizers",
+    "crops": ["Fertilizer", "Vegetables"],
+    "experience": "9 years farming",
+    "rating": 4.8,
+    "score": 860,
+    "about": "Supporting local growers with practical fertilizer and crop-care products."
+  },
+  {
+    "id": 3,
+    "name": "Faith Naliaka",
+    "region": "Western",
+    "items": "Vegetable seeds",
+    "crops": ["Vegetables", "Beans"],
+    "experience": "7 years farming",
+    "rating": 4.7,
+    "score": 824,
+    "about": "Growing seasonal vegetables and sharing planting knowledge with her community."
+  },
+  {
+    "id": 4,
+    "name": "David Kiptoo",
+    "region": "Rift Valley",
+    "items": "Maize and crop care",
+    "crops": ["Maize", "Wheat"],
+    "experience": "15 years farming",
+    "rating": 4.9,
+    "score": 812,
+    "about": "A long-time grain farmer with a focus on productive, resilient crops."
+  },
+  {
+    "id": 5,
+    "name": "Mary Wanjiku",
+    "region": "Eastern",
+    "items": "Vegetables",
+    "crops": ["Tomatoes", "Kale"],
+    "experience": "6 years farming",
+    "rating": 4.6,
+    "score": 798,
+    "about": "Growing fresh produce and making quality vegetable seed more accessible."
+  },
+  {
+    "id": 6,
+    "name": "Peter Mwangi",
+    "region": "Central",
+    "items": "Farm tools",
+    "crops": ["Farm tools", "Beans"],
+    "experience": "10 years farming",
+    "rating": 4.7,
+    "score": 780,
+    "about": "Helping small farms find dependable equipment and essential supplies."
+  },
+  {
+    "id": 7,
+    "name": "Grace Achieng",
+    "region": "Western",
+    "items": "Organic fertilizers",
+    "crops": ["Vegetables", "Maize"],
+    "experience": "8 years farming",
+    "rating": 4.8,
+    "score": 765,
+    "about": "Promoting sustainable farming with organic solutions for healthier crops."
+  },
+  {
+    "id": 8,
+    "name": "Samuel Otieno",
+    "region": "Nyanza",
+    "items": "Crop protection products",
+    "crops": ["Maize", "Beans"],
+    "experience": "11 years farming",
+    "rating": 4.9,
+    "score": 750,
+    "about": "Focused on crop protection and pest management for higher yields."
+  },
+  {
+    "id": 9,
+    "name": "Esther Njeri",
+    "region": "Eastern",
+    "items": "Vegetable seeds and seedlings",
+    "crops": ["Vegetables", "Herbs"],
+    "experience": "5 years farming",
+    "rating": 4.6,
+    "score": 740,
+    "about": "Providing quality vegetable seeds and seedlings for local growers."
+  },
+  {
+    "id": 10,
+    "name": "Michael Ochieng",
+    "region": "Nyanza",
+    "items": "Grain seeds and fertilizers",
+    "crops": ["Maize", "Sorghum"],
+    "experience": "13 years farming",
+    "rating": 4.8,
+    "score": 730,
+    "about": "Specializing in grain seed production and nutrient-rich fertilizers."
+  }
+]

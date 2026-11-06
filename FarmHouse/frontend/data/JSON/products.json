@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "High Yield Maize Seed",
+    "category": "Seeds",
+    "price": 2600,
+    "picture": "/frontend/assets/img/maize-seeds.png",
+    "description": "Drought-tolerant maize seed selected for strong germination and excellent yield in medium rainfall regions."
+  },
+  {
+    "id": 2,
+    "name": "Organic Compost Blend",
+    "category": "Fertilizer",
+    "price": 1800,
+    "picture": "/frontend/assets/img/fertilizer.jpg",
+    "description": "Balanced compost enriched with nutrients for healthier soil and improved long-term productivity."
+  },
+  {
+    "id": 3,
+    "name": "Crop Shield Insecticide",
+    "category": "Crop care",
+    "price": 2400,
+    "picture": "/frontend/assets/img/insecticide.jpg",
+    "description": "Reliable crop protection solution for controlling common pests while preserving plant health."
+  },
+  {
+    "id": 4,
+    "name": "Premium Vegetable Seed Pack",
+    "category": "Seeds",
+    "price": 1450,
+    "picture": "/frontend/assets/img/vegetable-seeds.jpg",
+    "description": "High-performing, short-cycle vegetable seed set for local and greenhouse cultivation."
+  },
+  {
+    "id": 5,
+    "name": "NPK Growth Fertilizer",
+    "category": "Fertilizer",
+    "price": 2200,
+    "picture": "/frontend/assets/img/npk.jpg",
+    "description": "A nutrient-rich formula designed to improve early vigor and support healthy crop growth."
+  },
+  {
+    "id": 6,
+    "name": "Disease Control Spray",
+    "category": "Crop care",
+    "price": 1950,
+    "picture": "/frontend/assets/img/disease-control.jpg",
+    "description": "Protects plants against fungal and bacterial infection with a quick-acting foliar formula."
+  }
+]

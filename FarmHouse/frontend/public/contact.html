@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with the FarmHouse team with a question or feedback.">
+    <title>Contact us | FarmHouse</title>
+    <link rel="stylesheet" href="/frontend/css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"><div class="container nav-bar">
+        <a class="brand" href="/frontend/index.html" aria-label="FarmHouse home"><img src="/frontend/assets/img/logo.png" alt=""><span class="brand-text">Farm<span class="brand-accent">House</span><small>GROWING TOGETHER</small></span></a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <nav class="site-nav" aria-label="Main navigation"><a href="/frontend/index.html">Home</a><a href="/frontend/public/catalogue.html">Catalogue</a><a href="/frontend/public/farmers.html">Farmers</a><a href="/frontend/public/about.html">About</a><a href="/frontend/public/contact.html" aria-current="page">Contact</a></nav>
+        <div class="nav-actions"><a class="nav-cart" href="/frontend/RBA%20(accounts)/buyer.html" aria-label="Shopping cart"><i class="fa-solid fa-basket-shopping"></i><span class="cart-count" data-cart-count>0</span></a><a class="button button-outline button-small nav-login" href="/frontend/public/log-in.html">Log in</a><a class="button button-primary button-small nav-register" href="/frontend/public/log-in.html#register">Join FarmHouse</a></div>
+    </div></header>
+    <main>
+        <section class="subhero"><div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/frontend/index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Contact</span></nav><p class="eyebrow">We’re here to help</p><h1>Let’s talk about growing together.</h1><p>Have a question, suggestion, or want to learn more about FarmHouse? Send a note to our team.</p></div></section>
+        <section class="section"><div class="container contact-grid">
+            <div class="contact-cards">
+                <article class="contact-card"><span class="feature-icon"><i class="fa-regular fa-envelope"></i></span><div><h3>Email our team</h3><a href="mailto:hello@farmhouse.example">hello@farmhouse.example</a></div></article>
+                <article class="contact-card"><span class="feature-icon"><i class="fa-solid fa-location-dot"></i></span><div><h3>Where we’re growing</h3><p>Kenya · Serving our local farming community</p></div></article>
+                <article class="contact-card"><span class="feature-icon"><i class="fa-regular fa-clock"></i></span><div><h3>Response times</h3><p>We’ll get back to you as soon as our team is available.</p></div></article>
+                <div class="auth-note"><i class="fa-solid fa-circle-info"></i> This contact form is a frontend preview. It does not send or store messages yet.</div>
+            </div>
+            <form class="form-panel" data-demo-form data-success="Thanks for reaching out. Your message is ready for our team once messaging is connected.">
+                <h2>Send us a message</h2><p>Fill in the details below and we’ll be in touch.</p>
+                <div class="form-grid">
+                    <label class="field">Your name<input name="name" autocomplete="name" required maxlength="80" placeholder="e.g. Amina Wanjiku"></label>
+                    <label class="field">Email address<input name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@example.com"></label>
+                    <label class="field field-full">What can we help with?
+                        <select name="topic" required><option value="">Choose a topic</option><option>Product question</option><option>Buyer account</option><option>Farmer account</option><option>Partnership</option><option>Other</option></select>
+                    </label>
+                    <label class="field field-full">Your message<textarea name="message" required minlength="10" maxlength="1500" placeholder="Tell us a little more about your question…"></textarea></label>
+                </div>
+                <button class="button button-primary" type="submit">Send message <i class="fa-solid fa-arrow-right"></i></button>
+                <div class="form-message" role="status" aria-live="polite"></div>
+            </form>
+        </div></section>
+    </main>
+    <footer class="site-footer"><div class="container"><div class="footer-grid">
+        <div><a class="brand footer-brand" href="/frontend/index.html"><img src="/frontend/assets/img/logo.png" alt=""><span class="brand-text">Farm<span class="brand-accent">House</span><small>GROWING TOGETHER</small></span></a><p class="footer-intro">Bringing farmers, buyers, and quality farm products closer together.</p></div>
+        <div class="footer-col"><h3>Explore</h3><a href="/frontend/public/catalogue.html">Product catalogue</a><a href="/frontend/public/farmers.html">Our farmers</a><a href="/frontend/public/about.html">About FarmHouse</a></div>
+        <div class="footer-col"><h3>Your account</h3><a href="/frontend/public/log-in.html">Sign in</a><a href="/frontend/RBA%20(accounts)/buyer.html">Buyer dashboard</a><a href="/frontend/RBA%20(accounts)/farmer.html">Farmer dashboard</a></div>
+        <div class="footer-col"><h3>Get in touch</h3><a href="mailto:hello@farmhouse.example">hello@farmhouse.example</a><p>Kenya · Growing together</p></div>
+    </div><div class="footer-bottom"><span>© <span data-current-year>2026</span> FarmHouse. Growing together.</span><span>We’d love to hear from you.</span></div></div></footer>
+    <script src="/frontend/js/site.js"></script>
+</body>
+</html>

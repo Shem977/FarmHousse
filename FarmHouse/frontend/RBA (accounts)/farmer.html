@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage sample farm listings and see preview activity in the FarmHouse farmer dashboard.">
+    <title>Farmer dashboard | FarmHouse</title>
+    <link rel="stylesheet" href="/frontend/css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"><div class="container nav-bar">
+        <a class="brand" href="/frontend/index.html" aria-label="FarmHouse home"><img src="/frontend/assets/img/logo.png" alt=""><span class="brand-text">Farm<span class="brand-accent">House</span><small>GROWING TOGETHER</small></span></a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <nav class="site-nav" aria-label="Main navigation"><a href="/frontend/index.html">Home</a><a href="/frontend/public/catalogue.html">Catalogue</a><a href="/frontend/public/farmers.html">Farmers</a><a href="/frontend/public/about.html">About</a><a href="/frontend/public/contact.html">Contact</a></nav>
+        <div class="nav-actions"><a class="button button-outline button-small nav-login" href="/frontend/public/log-in.html">Switch account</a><span class="farmer-avatar">JK</span></div>
+    </div></header>
+    <main class="section dashboard-shell"><div class="container">
+        <div class="dashboard-top"><div><p class="eyebrow">FARMER WORKSPACE · PREVIEW</p><h1>Good day, John Kamau</h1><p>Manage your sample listings and follow marketplace activity.</p></div><div class="dashboard-actions"><a class="button button-outline" href="/frontend/public/farmers.html"><i class="fa-solid fa-users"></i> Farmer community</a></div></div>
+        <div class="auth-note" style="margin-bottom:18px"><i class="fa-solid fa-circle-info"></i> Farmer dashboard preview. Listings added here are temporary and won’t be saved to a server.</div>
+        <div class="dashboard-stats">
+            <article class="dashboard-stat"><span>Sample listings</span><strong id="farmerProductCount">3</strong><small>Products in this preview</small></article>
+            <article class="dashboard-stat"><span>Orders this month</span><strong>18</strong><small>Example activity only</small></article>
+            <article class="dashboard-stat"><span>Sales preview</span><strong>KSh 42,800</strong><small>Sample data only</small></article>
+            <article class="dashboard-stat"><span>Profile rating</span><strong>4.9 <i class="fa-solid fa-star rating" style="font-size:.9rem"></i></strong><small>From sample profile</small></article>
+        </div>
+        <div class="dashboard-columns">
+            <div>
+                <section class="dashboard-panel"><div class="dashboard-panel-head"><div><h2>My product listings</h2><p>Sample listings shown for the dashboard preview.</p></div><button class="button button-primary button-small" type="button" id="showListingForm"><i class="fa-solid fa-plus"></i> Add listing</button></div>
+                    <div class="dashboard-panel-body" id="listingFormWrap" hidden><form id="listingForm">
+                        <div class="form-grid"><label class="field">Product name<input name="name" required maxlength="80" placeholder="e.g. Fresh bean seeds"></label><label class="field">Category<select name="category" required><option value="">Choose category</option><option>Seeds</option><option>Fertilizer</option><option>Crop care</option><option>Farm produce</option></select></label><label class="field">Price (KSh)<input name="price" type="number" min="1" step="1" required placeholder="2500"></label><label class="field">Available quantity<input name="quantity" type="number" min="1" step="1" required placeholder="20"></label></div>
+                        <div class="dashboard-actions"><button class="button button-primary button-small" type="submit">Add to preview</button><button class="button button-outline button-small" type="button" id="cancelListing">Cancel</button></div>
+                    </form></div>
+                    <div class="table-wrap"><table class="simple-table"><thead><tr><th>PRODUCT</th><th>CATEGORY</th><th>PRICE</th><th>STOCK</th><th>STATUS</th></tr></thead><tbody id="farmerProducts"><tr><td><strong>High Yield Maize Seed</strong></td><td>Seeds</td><td>KSh 2,600</td><td>84 units</td><td><span class="status-dot">Active</span></td></tr><tr><td><strong>Organic Compost Blend</strong></td><td>Fertilizer</td><td>KSh 1,800</td><td>52 units</td><td><span class="status-dot">Active</span></td></tr><tr><td><strong>Premium Vegetable Seed Pack</strong></td><td>Seeds</td><td>KSh 1,450</td><td>68 units</td><td><span class="status-dot">Active</span></td></tr></tbody></table></div>
+                </section>
+                <section class="dashboard-panel"><div class="dashboard-panel-head"><div><h2>Recent orders</h2><p>Example activity for your products.</p></div></div><div class="table-wrap"><table class="simple-table"><thead><tr><th>ORDER</th><th>PRODUCT</th><th>DATE</th><th>STATUS</th></tr></thead><tbody><tr><td><strong>#FH-2048</strong></td><td>Maize seed</td><td>Today</td><td><span class="status-dot processing">Processing</span></td></tr><tr><td><strong>#FH-2042</strong></td><td>Vegetable seed pack</td><td>Nov 3</td><td><span class="status-dot">Delivered</span></td></tr><tr><td><strong>#FH-2038</strong></td><td>Organic compost</td><td>Nov 1</td><td><span class="status-dot pending">Awaiting pickup</span></td></tr></tbody></table></div></section>
+            </div>
+            <aside>
+                <section class="dashboard-panel"><div class="dashboard-panel-head"><div><h2>Your profile</h2><p>Sample farmer account</p></div></div><div class="dashboard-panel-body"><div class="profile-card"><span class="farmer-avatar profile-large">JK</span><div><h3>John Kamau</h3><p><i class="fa-solid fa-location-dot"></i> Central region</p></div></div><p style="margin:15px 0 0;font-size:.84rem">Growing maize and beans, with a focus on dependable seed and healthy soil.</p><div class="farmer-crops" style="margin-top:13px"><span>Maize</span><span>Beans</span><span>Seeds</span></div></div></section>
+                <section class="dashboard-panel"><div class="dashboard-panel-head"><div><h2>Grower tip</h2><p>A little reminder for the season</p></div></div><div class="dashboard-panel-body"><span class="feature-icon"><i class="fa-regular fa-lightbulb"></i></span><p style="margin:0;font-size:.84rem">Keep product descriptions and available quantities up to date so buyers know what to expect.</p></div></section>
+            </aside>
+        </div>
+    </div></main>
+    <footer class="site-footer"><div class="container footer-bottom"><span>© <span data-current-year>2026</span> FarmHouse. Growing together.</span><span>Farmer workspace · Frontend preview</span></div></footer>
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+    <script src="/frontend/js/site.js"></script>
+    <script src="/frontend/js/farmer.js"></script>
+</body>
+</html>

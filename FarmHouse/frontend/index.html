@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop quality farm inputs and connect directly with trusted local farmers on FarmHouse.">
+    <meta name="theme-color" content="#173a28">
+    <title>FarmHouse | Buy and sell farm products</title>
+    <link rel="stylesheet" href="/frontend/css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-bar">
+            <a class="brand" href="/frontend/index.html" aria-label="FarmHouse home"><img src="/frontend/assets/img/logo.png" alt=""><span class="brand-text">Farm<span class="brand-accent">House</span><small>GROWING TOGETHER</small></span></a>
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="/frontend/index.html" aria-current="page">Home</a>
+                <a href="/frontend/public/catalogue.html">Catalogue</a>
+                <a href="/frontend/public/farmers.html">Farmers</a>
+                <a href="/frontend/public/about.html">About</a>
+                <a href="/frontend/public/contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a class="nav-cart" href="/frontend/RBA%20(accounts)/buyer.html" aria-label="Shopping cart"><i class="fa-solid fa-basket-shopping"></i><span class="cart-count" data-cart-count>0</span></a>
+                <a class="button button-outline button-small nav-login" href="/frontend/public/log-in.html">Log in</a>
+                <a class="button button-primary button-small nav-register" href="/frontend/public/log-in.html#register">Join FarmHouse</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero hero-home">
+            <div class="container hero-inner"><div class="hero-copy">
+                <p class="eyebrow">A better harvest starts here</p>
+                <h1>Good food begins with good farming.</h1>
+                <p>Find trusted farm inputs, discover local growers, and bring Kenya’s agricultural community closer together.</p>
+                <div class="hero-buttons"><a class="button button-gold" href="/frontend/public/catalogue.html">Explore products <i class="fa-solid fa-arrow-right"></i></a><a class="button button-light" href="/frontend/public/farmers.html">Meet our farmers</a></div>
+                <div class="hero-proof"><span><i class="fa-solid fa-circle-check"></i> Quality products</span><span><i class="fa-solid fa-location-dot"></i> Local suppliers</span><span><i class="fa-solid fa-handshake"></i> Grow together</span></div>
+            </div></div>
+        </section>
+
+        <div class="container"><div class="trust-strip">
+            <div class="trust-item"><i class="fa-solid fa-seedling"></i><span><strong>Farmer-first</strong><small>Supporting local growers</small></span></div>
+            <div class="trust-item"><i class="fa-solid fa-shield-heart"></i><span><strong>Quality focused</strong><small>Thoughtful farm essentials</small></span></div>
+            <div class="trust-item"><i class="fa-solid fa-truck-fast"></i><span><strong>Convenient shopping</strong><small>Browse from anywhere</small></span></div>
+            <div class="trust-item"><i class="fa-solid fa-leaf"></i><span><strong>Rooted in Kenya</strong><small>Growing our communities</small></span></div>
+        </div></div>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading"><p class="eyebrow">Ready for your farm</p><h2>Popular picks for the season</h2><p>Explore a few of the products farmers are reaching for. Browse the full catalogue to find what works for you.</p></div>
+                <div id="top-items" class="product-grid"><p class="loading-message">Loading farm essentials…</p></div>
+                <div style="margin-top:28px;text-align:center"><a class="button button-outline" href="/frontend/public/catalogue.html">View full catalogue <i class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+        </section>
+
+        <section class="section section-tint">
+            <div class="container">
+                <div class="section-heading"><p class="eyebrow">Meet the growers</p><h2>Top farmers in our community</h2><p>Get to know some of the growers and suppliers building a stronger local farming community.</p></div>
+                <div class="farmer-grid" id="top-farmers" aria-live="polite"><p class="loading-message">Loading farmer profiles…</p></div>
+                <div style="margin-top:28px;text-align:center"><a class="button button-outline" href="/frontend/public/farmers.html">View all farmers <i class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+        </section>
+
+        <section class="section section-tint">
+            <div class="container story-grid">
+                <img class="story-image" src="/frontend/assets/img/vegetable-seeds.jpg" alt="Seeds ready for planting">
+                <div class="story-copy"><p class="eyebrow">From the soil, together</p><h2>A stronger farming community starts with connection.</h2><p>FarmHouse brings farmers and buyers together around the products that keep farms thriving. Discover local suppliers, explore useful inputs, and make your next growing season count.</p><ul class="story-points"><li><i class="fa-solid fa-check"></i><span>Find products for everyday farm needs</span></li><li><i class="fa-solid fa-check"></i><span>Discover growers and their regional specialties</span></li><li><i class="fa-solid fa-check"></i><span>Join a community built around agriculture</span></li></ul><div style="margin-top:24px"><a class="button button-primary" href="/frontend/public/about.html">Our story</a></div></div>
+            </div>
+        </section>
+
+        <section class="section"><div class="container footer-cta"><p class="eyebrow">Your next season starts here</p><h2>Are you growing with us?</h2><p>Whether you’re looking for farm essentials or ready to share what you grow, there’s a place for you in the FarmHouse community.</p><a class="button button-gold" href="/frontend/public/log-in.html#register">Get started <i class="fa-solid fa-arrow-right"></i></a></div></section>
+    </main>
+    <footer class="site-footer">
+        <div class="container"><div class="footer-grid">
+            <div><a class="brand footer-brand" href="/frontend/index.html"><img src="/frontend/assets/img/logo.png" alt=""><span class="brand-text">Farm<span class="brand-accent">House</span><small>GROWING TOGETHER</small></span></a><p class="footer-intro">Bringing farmers, buyers, and quality farm products closer together.</p></div>
+            <div class="footer-col"><h3>Explore</h3><a href="/frontend/public/catalogue.html">Product catalogue</a><a href="/frontend/public/farmers.html">Our farmers</a><a href="/frontend/public/about.html">About FarmHouse</a></div>
+            <div class="footer-col"><h3>Your account</h3><a href="/frontend/public/log-in.html">Sign in</a><a href="/frontend/RBA%20(accounts)/buyer.html">Buyer dashboard</a><a href="/frontend/RBA%20(accounts)/farmer.html">Farmer dashboard</a></div>
+            <div class="footer-col"><h3>Get in touch</h3><a href="/frontend/public/contact.html">Contact our team</a><a href="mailto:hello@farmhouse.example">hello@farmhouse.example</a><p>Kenya · Growing together</p></div>
+        </div><div class="footer-bottom"><span>© <span data-current-year>2026</span> FarmHouse. Growing together.</span><span>Built for a thriving farming community.</span></div></div>
+    </footer>
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+    <script src="/frontend/js/site.js"></script>
+    <script src="/frontend/js/store.js"></script>
+    <script src="/frontend/js/script.js"></script>
+    <script src="/frontend/js/top-farmers.js"></script>
+</body>
+</html>

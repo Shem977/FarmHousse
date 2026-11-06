@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183d2b">
+    <title>Admin dashboard | FarmHouse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/frontend/css/admin.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" href="/frontend/index.html" aria-label="FarmHouse home">
+                <img src="/frontend/assets/img/logo.png" alt="">
+                <span>Farm<span class="brand-accent">House</span><small>ADMIN CONSOLE</small></span>
+            </a>
+
+            <div class="sidebar-label">WORKSPACE</div>
+            <nav class="side-nav" aria-label="Admin navigation">
+                <button class="nav-link active" type="button" data-view="overview"><i class="fa-solid fa-chart-pie"></i><span>Overview</span></button>
+                <button class="nav-link" type="button" data-view="orders"><i class="fa-solid fa-bag-shopping"></i><span>Orders</span><span class="nav-count">8</span></button>
+                <button class="nav-link" type="button" data-view="products"><i class="fa-solid fa-seedling"></i><span>Products</span></button>
+                <button class="nav-link" type="button" data-view="farmers"><i class="fa-solid fa-tractor"></i><span>Farmers</span></button>
+                <button class="nav-link" type="button" data-view="customers"><i class="fa-solid fa-users"></i><span>Customers</span></button>
+                <button class="nav-link" type="button" data-view="reports"><i class="fa-solid fa-chart-column"></i><span>Reports</span></button>
+            </nav>
+
+            <div class="sidebar-label sidebar-label-lower">PREFERENCES</div>
+            <nav class="side-nav" aria-label="Preferences">
+                <button class="nav-link" type="button" data-view="settings"><i class="fa-solid fa-gear"></i><span>Settings</span></button>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="help-card">
+                    <span class="help-icon"><i class="fa-regular fa-circle-question"></i></span>
+                    <strong>Need a hand?</strong>
+                    <p>Your admin guide is just a click away.</p>
+                    <a href="mailto:support@farmhouse.example">Get support <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <button class="account-button" type="button" aria-label="Admin account">
+                    <span class="avatar avatar-admin">AM</span>
+                    <span class="account-copy"><strong>Admin Manager</strong><small>Administrator</small></span>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <button class="icon-button mobile-menu" type="button" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="breadcrumb"><span>Workspace</span><i class="fa-solid fa-chevron-right"></i><strong id="breadcrumbCurrent">Overview</strong></div>
+                <div class="topbar-actions">
+                    <label class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input id="globalSearch" type="search" placeholder="Search this page..." aria-label="Search current page">
+                        <kbd>/</kbd>
+                    </label>
+                    <button class="icon-button notification-button" type="button" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i><span class="notification-dot"></span>
+                    </button>
+                    <span class="topbar-divider"></span>
+                    <div class="topbar-user"><span class="avatar avatar-admin">AM</span><span>Admin</span><i class="fa-solid fa-chevron-down"></i></div>
+                </div>
+            </header>
+
+            <div class="page-wrap">
+                <div class="demo-banner"><i class="fa-solid fa-circle-info"></i> Preview dashboard · Sample data is shown until a backend is connected.</div>
+
+                <section class="view-panel active" id="view-overview" data-title="Overview">
+                    <div class="page-heading">
+                        <div><p class="eyebrow" id="currentDate">FARMHOUSE AT A GLANCE</p><h1>Good morning, Admin <span class="wave">✳</span></h1><p class="page-subtitle">Here’s what’s happening across your marketplace today.</p></div>
+                        <button class="button button-outline" type="button" data-export="orders"><i class="fa-solid fa-arrow-down-to-line"></i> Export report</button>
+                    </div>
+
+                    <div class="stats-grid">
+                        <article class="stat-card">
+                            <div class="stat-top"><span class="stat-icon green"><i class="fa-solid fa-coins"></i></span><span class="trend positive"><i class="fa-solid fa-arrow-trend-up"></i> 12.8%</span></div>
+                            <p class="stat-label">Total revenue</p><strong class="stat-value">KSh 284,650</strong><span class="stat-note">Compared to last month</span>
+                        </article>
+                        <article class="stat-card">
+                            <div class="stat-top"><span class="stat-icon yellow"><i class="fa-solid fa-bag-shopping"></i></span><span class="trend positive"><i class="fa-solid fa-arrow-trend-up"></i> 8.2%</span></div>
+                            <p class="stat-label">Orders this month</p><strong class="stat-value">1,248</strong><span class="stat-note">Compared to last month</span>
+                        </article>
+                        <article class="stat-card">
+                            <div class="stat-top"><span class="stat-icon blue"><i class="fa-solid fa-users"></i></span><span class="trend positive"><i class="fa-solid fa-arrow-trend-up"></i> 5.4%</span></div>
+                            <p class="stat-label">Active customers</p><strong class="stat-value">846</strong><span class="stat-note">Compared to last month</span>
+                        </article>
+                        <article class="stat-card">
+                            <div class="stat-top"><span class="stat-icon lilac"><i class="fa-solid fa-tractor"></i></span><span class="stat-caption">Marketplace</span></div>
+                            <p class="stat-label">Registered farmers</p><strong class="stat-value">126</strong><span class="stat-note">Across 8 regions</span>
+                        </article>
+                    </div>
+
+                    <div class="content-grid">
+                        <article class="panel revenue-panel">
+                            <div class="panel-heading">
+                                <div><h2>Revenue overview</h2><p>Sales performance through the year</p></div>
+                                <span class="period-tag">JAN — DEC</span>
+                            </div>
+                            <div class="chart-summary"><strong>KSh 284,650</strong><span class="trend positive"><i class="fa-solid fa-arrow-trend-up"></i> 12.8%</span><small>vs. previous period</small></div>
+                            <div class="chart" role="img" aria-label="Revenue chart, rising from January to December">
+                                <div class="chart-y-labels"><span>80k</span><span>60k</span><span>40k</span><span>20k</span><span>0</span></div>
+                                <div class="chart-plot">
+                                    <div class="chart-gridlines"><span></span><span></span><span></span><span></span><span></span></div>
+                                    <svg viewBox="0 0 720 190" preserveAspectRatio="none" aria-hidden="true">
+                                        <defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#348152" stop-opacity=".2"/><stop offset="100%" stop-color="#348152" stop-opacity="0"/></linearGradient></defs>
+                                        <path class="chart-area" d="M0 148 C35 142 47 128 65 134 S105 144 130 118 S165 105 196 119 S228 120 261 88 S306 108 326 86 S365 102 391 79 S429 98 457 62 S499 75 521 56 S563 72 587 42 S626 63 652 34 S690 48 720 18 V190 H0 Z"/>
+                                        <path class="chart-line" d="M0 148 C35 142 47 128 65 134 S105 144 130 118 S165 105 196 119 S228 120 261 88 S306 108 326 86 S365 102 391 79 S429 98 457 62 S499 75 521 56 S563 72 587 42 S626 63 652 34 S690 48 720 18"/>
+                                        <circle cx="720" cy="18" r="5" class="chart-point"/>
+                                    </svg>
+                                    <div class="chart-x-labels"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="panel category-panel">
+                            <div class="panel-heading"><div><h2>Top categories</h2><p>By order volume</p></div><button class="text-button" type="button" data-go="products">View products <i class="fa-solid fa-arrow-right"></i></button></div>
+                            <div class="category-list">
+                                <div class="category-row"><span class="category-mark seeds"><i class="fa-solid fa-wheat-awn"></i></span><span class="category-info"><strong>Seeds</strong><small>412 orders</small></span><strong class="category-share">38%</strong><span class="category-bar"><i style="width: 38%"></i></span></div>
+                                <div class="category-row"><span class="category-mark fertilizer"><i class="fa-solid fa-leaf"></i></span><span class="category-info"><strong>Fertilizer</strong><small>286 orders</small></span><strong class="category-share">27%</strong><span class="category-bar"><i style="width: 27%"></i></span></div>
+                                <div class="category-row"><span class="category-mark care"><i class="fa-solid fa-shield-halved"></i></span><span class="category-info"><strong>Crop care</strong><small>198 orders</small></span><strong class="category-share">19%</strong><span class="category-bar"><i style="width: 19%"></i></span></div>
+                                <div class="category-row"><span class="category-mark tools"><i class="fa-solid fa-toolbox"></i></span><span class="category-info"><strong>Tools &amp; equipment</strong><small>174 orders</small></span><strong class="category-share">16%</strong><span class="category-bar"><i style="width: 16%"></i></span></div>
+                            </div>
+                            <div class="category-footer"><span><i class="fa-solid fa-circle-check"></i> All categories are performing well</span></div>
+                        </article>
+                    </div>
+
+                    <article class="panel table-panel">
+                        <div class="panel-heading table-heading">
+                            <div><h2>Recent orders</h2><p>A quick look at the latest marketplace activity</p></div>
+                            <button class="button button-outline button-small" type="button" data-go="orders">All orders <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="table-scroll"><table><thead><tr><th>ORDER</th><th>CUSTOMER</th><th>DATE</th><th>AMOUNT</th><th>STATUS</th></tr></thead>
+                            <tbody class="searchable-rows">
+                                <tr><td class="order-id">#FH-2048</td><td><span class="person-cell"><span class="avatar avatar-orange">MW</span><span><strong>Mary Wanjiku</strong><small>mary.w@email.com</small></span></span></td><td>Today, 10:42 AM</td><td class="amount">KSh 5,200</td><td><span class="status status-processing">Processing</span></td></tr>
+                                <tr><td class="order-id">#FH-2047</td><td><span class="person-cell"><span class="avatar avatar-blue">JO</span><span><strong>Joseph Otieno</strong><small>j.otieno@email.com</small></span></span></td><td>Today, 9:18 AM</td><td class="amount">KSh 2,600</td><td><span class="status status-delivered">Delivered</span></td></tr>
+                                <tr><td class="order-id">#FH-2046</td><td><span class="person-cell"><span class="avatar avatar-lilac">GK</span><span><strong>Grace Kamau</strong><small>grace.k@email.com</small></span></span></td><td>Yesterday, 4:36 PM</td><td class="amount">KSh 8,450</td><td><span class="status status-pending">Pending</span></td></tr>
+                                <tr><td class="order-id">#FH-2045</td><td><span class="person-cell"><span class="avatar avatar-green">DK</span><span><strong>David Kiptoo</strong><small>d.kiptoo@email.com</small></span></span></td><td>Yesterday, 1:02 PM</td><td class="amount">KSh 3,900</td><td><span class="status status-delivered">Delivered</span></td></tr>
+                            </tbody>
+                        </table></div>
+                    </article>
+                </section>
+
+                <section class="view-panel" id="view-orders" data-title="Orders" hidden>
+                    <div class="page-heading"><div><p class="eyebrow">MARKETPLACE MANAGEMENT</p><h1>Orders</h1><p class="page-subtitle">Track and review customer orders.</p></div><button class="button button-outline" type="button" data-export="orders"><i class="fa-solid fa-arrow-down-to-line"></i> Export orders</button></div>
+                    <article class="panel table-panel">
+                        <div class="panel-heading table-heading"><div><h2>All orders <span class="inline-count">8</span></h2><p>Sample orders for dashboard preview</p></div><label class="select-wrap"><span class="sr-only">Filter orders by status</span><select id="orderFilter"><option value="all">All statuses</option><option value="processing">Processing</option><option value="pending">Pending</option><option value="delivered">Delivered</option></select><i class="fa-solid fa-chevron-down"></i></label></div>
+                        <div class="table-scroll"><table><thead><tr><th>ORDER</th><th>CUSTOMER</th><th>DATE</th><th>AMOUNT</th><th>STATUS</th></tr></thead><tbody class="searchable-rows">
+                            <tr><td class="order-id">#FH-2048</td><td><span class="person-cell"><span class="avatar avatar-orange">MW</span><span><strong>Mary Wanjiku</strong><small>mary.w@email.com</small></span></span></td><td>Today, 10:42 AM</td><td class="amount">KSh 5,200</td><td><span class="status status-processing">Processing</span></td></tr>
+                            <tr><td class="order-id">#FH-2047</td><td><span class="person-cell"><span class="avatar avatar-blue">JO</span><span><strong>Joseph Otieno</strong><small>j.otieno@email.com</small></span></span></td><td>Today, 9:18 AM</td><td class="amount">KSh 2,600</td><td><span class="status status-delivered">Delivered</span></td></tr>
+                            <tr><td class="order-id">#FH-2046</td><td><span class="person-cell"><span class="avatar avatar-lilac">GK</span><span><strong>Grace Kamau</strong><small>grace.k@email.com</small></span></span></td><td>Yesterday, 4:36 PM</td><td class="amount">KSh 8,450</td><td><span class="status status-pending">Pending</span></td></tr>
+                            <tr><td class="order-id">#FH-2045</td><td><span class="person-cell"><span class="avatar avatar-green">DK</span><span><strong>David Kiptoo</strong><small>d.kiptoo@email.com</small></span></span></td><td>Yesterday, 1:02 PM</td><td class="amount">KSh 3,900</td><td><span class="status status-delivered">Delivered</span></td></tr>
+                            <tr><td class="order-id">#FH-2044</td><td><span class="person-cell"><span class="avatar avatar-pink">AN</span><span><strong>Alice Njeri</strong><small>alice.n@email.com</small></span></span></td><td>Nov 4, 11:24 AM</td><td class="amount">KSh 6,100</td><td><span class="status status-processing">Processing</span></td></tr>
+                            <tr><td class="order-id">#FH-2043</td><td><span class="person-cell"><span class="avatar avatar-yellow">PM</span><span><strong>Peter Mwangi</strong><small>p.mwangi@email.com</small></span></span></td><td>Nov 4, 9:50 AM</td><td class="amount">KSh 1,800</td><td><span class="status status-pending">Pending</span></td></tr>
+                            <tr><td class="order-id">#FH-2042</td><td><span class="person-cell"><span class="avatar avatar-lilac">WN</span><span><strong>Winnie Naliaka</strong><small>w.naliaka@email.com</small></span></span></td><td>Nov 3, 3:15 PM</td><td class="amount">KSh 4,250</td><td><span class="status status-delivered">Delivered</span></td></tr>
+                            <tr><td class="order-id">#FH-2041</td><td><span class="person-cell"><span class="avatar avatar-blue">BK</span><span><strong>Brian Kibet</strong><small>b.kibet@email.com</small></span></span></td><td>Nov 3, 11:08 AM</td><td class="amount">KSh 7,600</td><td><span class="status status-processing">Processing</span></td></tr>
+                        </tbody></table></div>
+                    </article>
+                </section>
+
+                <section class="view-panel" id="view-products" data-title="Products" hidden>
+                    <div class="page-heading"><div><p class="eyebrow">MARKETPLACE MANAGEMENT</p><h1>Products</h1><p class="page-subtitle">Review the products available in your marketplace.</p></div><button class="button button-primary" type="button" id="openProductDialog"><i class="fa-solid fa-plus"></i> Add product</button></div>
+                    <article class="panel table-panel">
+                        <div class="panel-heading table-heading"><div><h2>Product catalogue <span class="inline-count" id="productCount">6</span></h2><p>Product changes are kept in this preview only.</p></div><button class="button button-outline button-small" type="button" data-export="products"><i class="fa-solid fa-arrow-down-to-line"></i> Export</button></div>
+                        <div class="table-scroll"><table><thead><tr><th>PRODUCT</th><th>CATEGORY</th><th>PRICE</th><th>STOCK</th><th>STATUS</th></tr></thead><tbody id="productRows" class="searchable-rows">
+                            <tr><td><span class="product-cell"><img src="/frontend/assets/img/maize-seeds.png" alt=""><span><strong>High Yield Maize Seed</strong><small>SKU-001 · John Kamau</small></span></span></td><td>Seeds</td><td class="amount">KSh 2,600</td><td>84 units</td><td><span class="status status-delivered">Active</span></td></tr>
+                            <tr><td><span class="product-cell"><img src="/frontend/assets/img/fertilizer.jpg" alt=""><span><strong>Organic Compost Blend</strong><small>SKU-002 · James Kariuki</small></span></span></td><td>Fertilizer</td><td class="amount">KSh 1,800</td><td>52 units</td><td><span class="status status-delivered">Active</span></td></tr>
+                            <tr><td><span class="product-cell"><img src="/frontend/assets/img/insecticide.jpg" alt=""><span><strong>Crop Shield Insecticide</strong><small>SKU-003 · John Kamau</small></span></span></td><td>Crop care</td><td class="amount">KSh 2,400</td><td>31 units</td><td><span class="status status-delivered">Active</span></td></tr>
+                            <tr><td><span class="product-cell"><img src="/frontend/assets/img/vegetable-seeds.jpg" alt=""><span><strong>Premium Vegetable Seed Pack</strong><small>SKU-004 · James Kariuki</small></span></span></td><td>Seeds</td><td class="amount">KSh 1,450</td><td>68 units</td><td><span class="status status-delivered">Active</span></td></tr>
+                            <tr><td><span class="product-cell"><img src="/frontend/assets/img/npk.jpg" alt=""><span><strong>NPK Growth Fertilizer</strong><small>SKU-005 · John Kamau</small></span></span></td><td>Fertilizer</td><td class="amount">KSh 2,200</td><td>12 units</td><td><span class="status status-pending">Low stock</span></td></tr>
+                            <tr><td><span class="product-cell"><img src="/frontend/assets/img/disease-control.jpg" alt=""><span><strong>Disease Control Spray</strong><small>SKU-006 · James Kariuki</small></span></span></td><td>Crop care</td><td class="amount">KSh 1,950</td><td>25 units</td><td><span class="status status-delivered">Active</span></td></tr>
+                        </tbody></table></div>
+                    </article>
+                </section>
+
+                <section class="view-panel" id="view-farmers" data-title="Farmers" hidden>
+                    <div class="page-heading"><div><p class="eyebrow">COMMUNITY</p><h1>Farmers</h1><p class="page-subtitle">A snapshot of farmers registered on FarmHouse.</p></div></div>
+                    <div class="stats-grid compact-stats"><article class="stat-card"><p class="stat-label">Registered farmers</p><strong class="stat-value">126</strong><span class="stat-note">Across 8 regions</span></article><article class="stat-card"><p class="stat-label">Active this month</p><strong class="stat-value">98</strong><span class="stat-note">78% of all farmers</span></article><article class="stat-card"><p class="stat-label">New this month</p><strong class="stat-value">14</strong><span class="stat-note">Sample dashboard data</span></article></div>
+                    <article class="panel table-panel"><div class="panel-heading table-heading"><div><h2>Top farmers</h2><p>Sample farmer directory</p></div></div><div class="table-scroll"><table><thead><tr><th>FARMER</th><th>PRODUCTS</th><th>REGION</th><th>RATING</th><th>STATUS</th></tr></thead><tbody class="searchable-rows">
+                        <tr><td><span class="person-cell"><span class="avatar avatar-green">JK</span><span><strong>John Kamau</strong><small>Joined Jan 2025</small></span></span></td><td>Maize seeds</td><td>Central</td><td><i class="fa-solid fa-star rating-star"></i> 4.9</td><td><span class="status status-delivered">Active</span></td></tr>
+                        <tr><td><span class="person-cell"><span class="avatar avatar-orange">JK</span><span><strong>James Kariuki</strong><small>Joined Mar 2025</small></span></span></td><td>Fertilizers</td><td>Central</td><td><i class="fa-solid fa-star rating-star"></i> 4.8</td><td><span class="status status-delivered">Active</span></td></tr>
+                        <tr><td><span class="person-cell"><span class="avatar avatar-blue">FN</span><span><strong>Faith Naliaka</strong><small>Joined Jun 2025</small></span></span></td><td>Vegetables</td><td>Western</td><td><i class="fa-solid fa-star rating-star"></i> 4.7</td><td><span class="status status-delivered">Active</span></td></tr>
+                    </tbody></table></div></article>
+                </section>
+
+                <section class="view-panel" id="view-customers" data-title="Customers" hidden>
+                    <div class="page-heading"><div><p class="eyebrow">COMMUNITY</p><h1>Customers</h1><p class="page-subtitle">Customer activity across the marketplace.</p></div></div>
+                    <div class="stats-grid compact-stats"><article class="stat-card"><p class="stat-label">Total customers</p><strong class="stat-value">846</strong><span class="stat-note">Sample dashboard data</span></article><article class="stat-card"><p class="stat-label">Repeat customers</p><strong class="stat-value">62%</strong><span class="stat-note">Of customers ordered again</span></article><article class="stat-card"><p class="stat-label">New this month</p><strong class="stat-value">73</strong><span class="stat-note">Sample dashboard data</span></article></div>
+                    <article class="panel table-panel"><div class="panel-heading table-heading"><div><h2>Recent customers</h2><p>Customer details shown are sample data</p></div></div><div class="table-scroll"><table><thead><tr><th>CUSTOMER</th><th>EMAIL</th><th>ORDERS</th><th>TOTAL SPENT</th><th>STATUS</th></tr></thead><tbody class="searchable-rows">
+                        <tr><td><span class="person-cell"><span class="avatar avatar-orange">MW</span><strong>Mary Wanjiku</strong></span></td><td>mary.w@email.com</td><td>12</td><td class="amount">KSh 28,400</td><td><span class="status status-delivered">Active</span></td></tr>
+                        <tr><td><span class="person-cell"><span class="avatar avatar-blue">JO</span><strong>Joseph Otieno</strong></span></td><td>j.otieno@email.com</td><td>8</td><td class="amount">KSh 19,650</td><td><span class="status status-delivered">Active</span></td></tr>
+                        <tr><td><span class="person-cell"><span class="avatar avatar-lilac">GK</span><strong>Grace Kamau</strong></span></td><td>grace.k@email.com</td><td>5</td><td class="amount">KSh 12,300</td><td><span class="status status-delivered">Active</span></td></tr>
+                    </tbody></table></div></article>
+                </section>
+
+                <section class="view-panel" id="view-reports" data-title="Reports" hidden>
+                    <div class="page-heading"><div><p class="eyebrow">INSIGHTS</p><h1>Reports</h1><p class="page-subtitle">A quick summary of marketplace performance.</p></div><button class="button button-outline" type="button" data-export="orders"><i class="fa-solid fa-arrow-down-to-line"></i> Download orders CSV</button></div>
+                    <div class="stats-grid compact-stats"><article class="stat-card"><p class="stat-label">Gross sales</p><strong class="stat-value">KSh 284,650</strong><span class="trend positive"><i class="fa-solid fa-arrow-trend-up"></i> 12.8% this month</span></article><article class="stat-card"><p class="stat-label">Orders completed</p><strong class="stat-value">1,102</strong><span class="stat-note">88% completion rate</span></article><article class="stat-card"><p class="stat-label">Average order</p><strong class="stat-value">KSh 2,140</strong><span class="stat-note">Across all categories</span></article></div>
+                    <article class="panel report-note"><span class="stat-icon green"><i class="fa-solid fa-chart-line"></i></span><div><h2>Sales are trending up</h2><p>Revenue is up 12.8% compared to the previous month. Seeds remain the highest-volume category in this sample dashboard.</p></div></article>
+                </section>
+
+                <section class="view-panel" id="view-settings" data-title="Settings" hidden>
+                    <div class="page-heading"><div><p class="eyebrow">PREFERENCES</p><h1>Settings</h1><p class="page-subtitle">Manage your admin workspace preferences.</p></div></div>
+                    <article class="panel settings-panel"><div><span class="stat-icon green"><i class="fa-solid fa-user-shield"></i></span><div><h2>Administrator profile</h2><p>Admin Manager · Administrator</p></div></div><span class="settings-preview">Account settings will be available when authentication is connected.</span></article>
+                    <article class="panel settings-panel"><div><span class="stat-icon yellow"><i class="fa-solid fa-bell"></i></span><div><h2>Notifications</h2><p>Order and marketplace updates</p></div></div><span class="settings-preview">Notification preferences are part of the upcoming backend.</span></article>
+                </section>
+
+                <footer class="page-footer"><span>© <span id="currentYear"></span> FarmHouse · Growing together</span><span>Admin preview <span class="footer-dot"></span> Frontend only</span></footer>
+            </div>
+        </main>
+    </div>
+
+    <dialog class="product-dialog" id="productDialog" aria-labelledby="dialogTitle">
+        <form id="productForm">
+            <div class="dialog-heading"><div><p class="eyebrow">PRODUCT CATALOGUE</p><h2 id="dialogTitle">Add a product</h2></div><button class="icon-button" type="button" id="closeProductDialog" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
+            <p class="dialog-note">This adds a sample row to the page only. Nothing is saved to a server.</p>
+            <label class="form-field">Product name<input name="name" required maxlength="80" placeholder="e.g. Premium bean seeds"></label>
+            <div class="form-row"><label class="form-field">Category<select name="category" required><option value="">Choose category</option><option>Seeds</option><option>Fertilizer</option><option>Crop care</option><option>Tools &amp; equipment</option></select></label><label class="form-field">Price (KSh)<input name="price" type="number" min="1" step="1" required placeholder="2500"></label></div>
+            <div class="dialog-actions"><button class="button button-outline" type="button" id="cancelProductDialog">Cancel</button><button class="button button-primary" type="submit"><i class="fa-solid fa-plus"></i> Add to preview</button></div>
+        </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/frontend/js/admin.js"></script>
+</body>
+</html>

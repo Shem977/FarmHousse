@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the growers and local suppliers featured in the FarmHouse community.">
+    <title>Our farmers | FarmHouse</title>
+    <link rel="stylesheet" href="/frontend/css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="site-header"><div class="container nav-bar">
+        <a class="brand" href="/frontend/index.html" aria-label="FarmHouse home"><img src="/frontend/assets/img/logo.png" alt=""><span class="brand-text">Farm<span class="brand-accent">House</span><small>GROWING TOGETHER</small></span></a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        <nav class="site-nav" aria-label="Main navigation"><a href="/frontend/index.html">Home</a><a href="/frontend/public/catalogue.html">Catalogue</a><a href="/frontend/public/farmers.html" aria-current="page">Farmers</a><a href="/frontend/public/about.html">About</a><a href="/frontend/public/contact.html">Contact</a></nav>
+        <div class="nav-actions"><a class="nav-cart" href="/frontend/RBA%20(accounts)/buyer.html" aria-label="Shopping cart"><i class="fa-solid fa-basket-shopping"></i><span class="cart-count" data-cart-count>0</span></a><a class="button button-outline button-small nav-login" href="/frontend/public/log-in.html">Log in</a><a class="button button-primary button-small nav-register" href="/frontend/public/log-in.html#register">Join FarmHouse</a></div>
+    </div></header>
+    <main>
+        <section class="subhero subhero-photo"><div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/frontend/index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Farmers</span></nav><p class="eyebrow">Meet the growers</p><h1>Good farming starts with good people.</h1><p>Get to know some of the farmers and local suppliers featured in our sample FarmHouse community.</p></div></section>
+        <section class="section"><div class="container">
+            <div class="section-heading"><p class="eyebrow">Our community</p><h2>Farmers growing across Kenya</h2><p>These profiles are sample listings for the frontend preview. Farmer details and availability will be verified when the marketplace is connected.</p></div>
+            <div class="catalogue-toolbar"><div class="filter-group" role="group" aria-label="Filter farmers by region"><button class="filter-chip active" type="button" data-region="all" aria-pressed="true">All regions</button><button class="filter-chip" type="button" data-region="Central" aria-pressed="false">Central</button><button class="filter-chip" type="button" data-region="Western" aria-pressed="false">Western</button><button class="filter-chip" type="button" data-region="Rift Valley" aria-pressed="false">Rift Valley</button><button class="filter-chip" type="button" data-region="Eastern" aria-pressed="false">Eastern</button></div><label class="search-field"><i class="fa-solid fa-magnifying-glass"></i><span class="sr-only">Search farmers</span><input id="farmerSearch" type="search" placeholder="Search name or crop…"></label></div>
+            <p class="results-line" id="farmerResults" aria-live="polite">Loading farmers…</p>
+            <div class="farmer-grid" id="farmerList" aria-live="polite"><p class="loading-message">Loading farmer profiles…</p></div>
+        </div></section>
+        <section class="section section-tint"><div class="container farmer-join"><div><h3>Are you a farmer?</h3><p>Create a grower profile and get ready to share your products with the community.</p></div><a class="button button-gold" href="/frontend/public/log-in.html#register">Join as a farmer <i class="fa-solid fa-arrow-right"></i></a></div></section>
+    </main>
+    <footer class="site-footer"><div class="container"><div class="footer-grid">
+        <div><a class="brand footer-brand" href="/frontend/index.html"><img src="/frontend/assets/img/logo.png" alt=""><span class="brand-text">Farm<span class="brand-accent">House</span><small>GROWING TOGETHER</small></span></a><p class="footer-intro">Bringing farmers, buyers, and quality farm products closer together.</p></div>
+        <div class="footer-col"><h3>Explore</h3><a href="/frontend/public/catalogue.html">Product catalogue</a><a href="/frontend/public/farmers.html">Our farmers</a><a href="/frontend/public/about.html">About FarmHouse</a></div>
+        <div class="footer-col"><h3>Your account</h3><a href="/frontend/public/log-in.html">Sign in</a><a href="/frontend/RBA%20(accounts)/farmer.html">Farmer dashboard</a></div>
+        <div class="footer-col"><h3>Get in touch</h3><a href="/frontend/public/contact.html">Contact our team</a><a href="mailto:hello@farmhouse.example">hello@farmhouse.example</a></div>
+    </div><div class="footer-bottom"><span>© <span data-current-year>2026</span> FarmHouse. Growing together.</span><span>Farmer profiles are sample content.</span></div></div></footer>
+    <script src="/frontend/js/site.js"></script>
+    <script src="/frontend/js/farmers.js"></script>
+</body>
+</html>
